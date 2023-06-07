@@ -8,7 +8,7 @@ else:
     n = number % 10
 print(f"Last digit of {number:d} is {n:d}", end=' ')
 if n > 5:
-    print(f"and is greater then 5")
+    print(f"and is greater than 5")
 elif n == 0:
     print(f"and is 0")
 elif n < 6:
