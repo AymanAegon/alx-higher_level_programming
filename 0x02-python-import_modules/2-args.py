@@ -4,7 +4,7 @@ import sys
 
 if __name__ == "__main__":
     nbr = len(sys.argv)
-    if nbr== 2:
+    if nbr == 2:
         print("{} argument:".format(nbr - 1))
         print("{}: {}".format(1, sys.argv[1]))
     elif nbr > 2:
