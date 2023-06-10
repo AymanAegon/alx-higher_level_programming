@@ -20,6 +20,8 @@ int is_palindrome(listint_t **head)
 		arr[i] = temp->n;
 		temp = temp->next;
 	}
+	if (len > 1 && len % 2 == 1)
+		temp = temp->next;
 	for (i = len / 2 - 1; i >= 0; i--)
 	{
 		if (arr[i] != temp->n)
