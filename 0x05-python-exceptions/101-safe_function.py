@@ -6,9 +6,9 @@ def safe_function(fct, *args):
     result = None
     try:
         result = fct(*args)
-    except ZeroDivisionError:
-        print("Exception: division by 0", sys.stderr)
-    except IndexError:
-        print("Exception: list index out of range", sys.stderr)
+    except ZeroDivisionError as ex:
+        print("Exception: {}".format(ex), file=sys.stderr)
+    except IndexError as ex2:
+        print("Exception: {}".format(ex2), file=sys.stderr)
 
     return result
