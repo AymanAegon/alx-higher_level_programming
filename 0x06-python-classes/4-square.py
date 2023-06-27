@@ -7,53 +7,62 @@ Defines class Square with Size validation
 
 class Square:
     """
-    class Square definition
+    Represents a square shape.
 
-    Args:
-        size: size of a side in square
+    Attributes:
+        __size (int): The size of the square.
 
     Methods:
-        area(): returns the current square area
+        area(): Calculates the area of the square.
     """
+
     def __init__(self, size=0):
         """
-        Initializes square
+        Initializes a Square instance.
 
-        Attributes:
-            size: size of a side of square
+        Args:
+            size (int): The size of the square. Default is 0.
+
+        Raises:
+            TypeError: If size is not an integer.
+            ValueError: If size is less than 0.
         """
-        if type(size) is not int:
+        if not isinstance(size, int):
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
         else:
             self.__size = size
-    
+
     def area(self):
         """
-        returns the current square area
+        Calculates the area of the square.
 
         Returns:
-            the current square area
+            int: The area of the square.
         """
         return self.__size ** 2
+
     @property
     def size(self):
         """
-        Getter
-
-        Return: size
+        int: The size of the square.
         """
         return self.__size
+
     @size.setter
     def size(self, value):
         """
-        Setter
+        Sets the size of the square.
 
         Args:
-            value: new size of a side of square
+            value (int): The new size value.
+
+        Raises:
+            TypeError: If value is not an integer.
+            ValueError: If value is less than 0.
         """
-        if type(value) is not int:
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
