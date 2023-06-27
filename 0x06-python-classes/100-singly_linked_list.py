@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
 Module 100-singly_linked_list
-defines a node of a singly linked list
+Defines class Node
+Defines class SinglyLinkedList
 """
 
 
@@ -10,30 +11,34 @@ class Node:
     class Node definition
 
     Args:
-        data (int): data of the node
+        data (int): private
+        next_node : private
 
     Functions:
-        __init__(self, value)
+        __init__(self, data, next_node=None)
         data(self)
         data(self, value)
+        next_node(self)
+        next_node(self, value)
     """
-    def __init__(self, data=None, next_node=None):
+
+    def __init__(self, data, next_node=None):
         """
-        initializes a Node
+        Initializes node
 
         Attributes:
-            value (int): data of the node
-            next_node (Node): next node
+            data (int): private
+            next_node : private
         """
-        self.__data = data
-        self.__next_node = next_node
+        self.data = data
+        self.next_node = next_node
 
     @property
     def data(self):
-        """
+        """"
         Getter
 
-        Returns: data of a node
+        Return: data
         """
         return self.__data
 
@@ -43,7 +48,7 @@ class Node:
         Setter
 
         Args:
-            value: to be set to data
+            value: sets data to value if int
         """
         if type(value) is not int:
             raise TypeError("data must be an integer")
@@ -52,10 +57,10 @@ class Node:
 
     @property
     def next_node(self):
-        """
+        """"
         Getter
 
-        Returns: the next node
+        Return: next_node
         """
         return self.__next_node
 
@@ -65,7 +70,7 @@ class Node:
         Setter
 
         Args:
-            value: to be set to next_node
+            value: sets next_node if value is next_node or None
         """
         if type(value) is not Node and value is not None:
             raise TypeError("next_node must be a Node object")
@@ -74,41 +79,59 @@ class Node:
 
 
 class SinglyLinkedList:
+    """
+    class SinglyLinkedList definition
+
+    Args:
+        head: private
+
+    Functions:
+        __init__(self)
+        sorted_insert(self, value)
+    """
+
     def __init__(self):
         """
-        Initializes a list
+        Initializes singly linked list
+
+        Attributes:
+            head: private
         """
         self.__head = None
 
     def __str__(self):
         """
-        print the entire list in stdout
+        String representation of singly linked list
         """
-        temp = self.__head
-        result = ""
-        while temp is not None:
-            result += str(temp.data) + "\n"
-            temp = temp.next_node
-        return result
+        string = ""
+        tmp = self.__head
+        while tmp is not None:
+            string += str(tmp.data)
+            tmp = tmp.next_node
+            if tmp is not None:
+                string += "\n"
+        return string
 
     def sorted_insert(self, value):
         """
-        Inserts a new Node
+        Inserts new nodes into singly linked list
 
         Args:
-            value: data for the new node
+        value: int data for node
         """
         new_node = Node(value)
-        temp = self.__head
         if self.__head is None:
             self.__head = new_node
             return
 
+        temp = self.__head
         if new_node.data < temp.data:
             new_node.next_node = self.__head
             self.__head = new_node
             return
-        while temp.next_node is not None and temp.next_node.data < value:
+        n = temp.next_node.data
+        while temp.next_node is not None and new_node.data > n:
             temp = temp.next_node
         new_node.next_node = temp.next_node
         temp.next_node = new_node
+        return
