@@ -12,7 +12,7 @@ class Square:
         __size (float): size of a side in square
     """
     __size = 0
-    def __init__(self, size = 0):
+    def __init__(self, size):
         """
         Initializes a square
 
