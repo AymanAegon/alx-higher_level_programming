@@ -13,6 +13,8 @@ class Square:
     """
     def __init__(self, size = 0):
         """
+        Initializes square
+
         Args:
             size : size of a side in square
         """
