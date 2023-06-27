@@ -14,8 +14,6 @@ class Square:
 
     Methods:
         area(): returns the current square area
-        size(): gets the attribute size
-        size(value): sets attribute size to a square
     """
     def __init__(self, size=0):
         """
@@ -46,7 +44,6 @@ class Square:
 
         Return: size
         """
-
         return self.__size
     @size.setter
     def size(self, value):
