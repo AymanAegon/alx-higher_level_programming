@@ -53,7 +53,7 @@ class Square:
         """
         sets attribute size to a square
 
-        Attributes:
+        Args:
             value: new size of a side of square
         """
         if type(value) is not int:
