@@ -58,6 +58,7 @@ class Node:
         Returns: the next node
         """
         return self.__next_node
+
     @next_node.setter
     def next_node(self, value):
         """
@@ -70,6 +71,7 @@ class Node:
             raise TypeError("next_node must be a Node object")
         else:
             self.__next_node = value
+
 
 class SinglyLinkedList:
     def __init__(self):
