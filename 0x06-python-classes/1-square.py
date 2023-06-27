@@ -9,7 +9,7 @@ class Square:
     class Square definition
 
     Attributes:
-        __size: size of a side in square
+        __size (float): size of a side in square
     """
     __size = 0
     def __init__(self, size = 0):
@@ -17,6 +17,6 @@ class Square:
         Initializes a square
 
         Args:
-            size: size of a side in square
+            size (float): size of a side in square
         """
         self.__size = size
