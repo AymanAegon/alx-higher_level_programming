@@ -42,7 +42,7 @@ class Square:
     @property
     def size(self):
         """
-        gets the attribute size
+        Getter
 
         Return: size
         """
@@ -51,7 +51,7 @@ class Square:
     @size.setter
     def size(self, value):
         """
-        sets attribute size to a square
+        Setter
 
         Args:
             value: new size of a side of square
