@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module 3-square
+Module 4-square
 Defines class Square with Size validation
 """
 
@@ -44,7 +44,7 @@ class Square:
         """
         gets the attribute size
 
-        Returns: size
+        Return: size
         """
 
         return self.__size
