@@ -38,6 +38,7 @@ class Rectangle:
         Returns the width
         """
         return self.__width
+
     @width.setter
     def width(self, value):
         """
@@ -62,6 +63,7 @@ class Rectangle:
         Returns the height
         """
         return self.__height
+
     @height.setter
     def height(self, value):
         """
