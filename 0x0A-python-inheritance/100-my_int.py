@@ -7,6 +7,10 @@ MyInt Module
 class MyInt(int):
     """
     inherits from int
+
+    Methods:
+        __eq__(self, x):
+        __ne__(self, x):
     """
 
     def __eq__(self, x):
