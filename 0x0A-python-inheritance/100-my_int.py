@@ -8,6 +8,7 @@ class MyInt(int):
     """
     inherits from int
     """
+
     def __eq__(self, x):
         """
         invert to !=
