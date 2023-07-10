@@ -36,4 +36,3 @@ class MyInt(int):
             self == x
         """
         return super().__eq__(x)
-
