@@ -7,6 +7,9 @@ MyList class Module
 class MyList(list):
     """
     MyList implementation
+
+    methods:
+        print_sorted(self)
     """
     def print_sorted(self):
         """
