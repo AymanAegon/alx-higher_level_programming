@@ -79,8 +79,11 @@ class Base:
         """
         s = ""
         file_name = cls.__name__ + ".json"
-        with open(file_name, 'r', encoding="utf-8") as f:
-            s = f.read()
+        try:
+            with open(file_name, 'r', encoding="utf-8") as f:
+                s = f.read()
+        except Exception:
+            pass
         arr = cls.from_json_string(s)
         instances = []
         for i in arr:
