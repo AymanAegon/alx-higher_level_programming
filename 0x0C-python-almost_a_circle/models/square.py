@@ -11,6 +11,7 @@ class Square(Rectangle):
     """
     inherits from Rectangle
     """
+
     def __init__(self, size, x=0, y=0, id=None):
         """
         Creates a Square
