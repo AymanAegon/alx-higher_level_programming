@@ -32,6 +32,8 @@ class Base:
         """
         returns the JSON string representation of list_dictionaries
         """
+        if len(list_dictionaries) == 0:
+            return None
         return json.dumps(list_dictionaries)
 
     @classmethod
