@@ -8,6 +8,8 @@ if (arr.length <= 3) {
     if (arr[i] > x) {
       y = x;
       x = arr[i];
+    } else if (arr[i] > y) {
+      y = arr[i];
     }
   }
   console.log(y);
