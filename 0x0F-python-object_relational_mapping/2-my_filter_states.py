@@ -15,8 +15,8 @@ if __name__ == "__main__":
                          passwd=argv[2],
                          db=argv[3])
     cursor = db.cursor()
-    q = "SELECT * FROM states WHERE name='{:s}' ORDER BY id ASC".format(argv[4])
-    cursor.execute(q)
+    cursor.execute("SELECT * FROM states WHERE name='{:s}' ORDER BY id ASC"
+                   .format(argv[4]))
     for row in cursor.fetchall():
         print(row)
     cursor.close()
