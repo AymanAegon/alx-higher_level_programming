@@ -20,7 +20,9 @@ if __name__ == "__main__":
                          db=argv[3])
 
     cursor = db.cursor()
-    cursor.execute("SELECT cities.id, cities.name, states.name FROM cities, states WHERE cities.state_id=states.id ORDER BY cities.id ASC")
+    a = "SELECT cities.id, cities.name, states.name FROM cities, states"
+    b = " WHERE cities.state_id=states.id ORDER BY cities.id ASC"
+    cursor.execute(a + b)
     for row in cursor.fetchall():
         print(row)
     cursor.close()
