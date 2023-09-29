@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Python script"""
-import urllib.request, sys
+import urllib.request
+import sys
 
 
 if __name__ == "__main__":
