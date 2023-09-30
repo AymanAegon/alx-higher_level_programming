@@ -17,4 +17,4 @@ if __name__ == "__main__":
         sha = i["sha"]
         name = i["commit"]["author"]["name"]
         print(f"{sha}: {name}")
-        c+=1
+        c += 1
