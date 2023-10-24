@@ -10,7 +10,7 @@ request(url, (error, response) => {
     const films = JSON.parse(response.body).results;
     films.forEach(film => {
       film.characters.forEach(c => {
-        if (c.includes("18")) {
+        if (c.includes('18')) {
           count += 1;
         }
       });
