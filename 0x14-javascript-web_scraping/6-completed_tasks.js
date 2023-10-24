@@ -9,10 +9,10 @@ request(url, (error, response) => {
     const d = {};
     const data = JSON.parse(response.body);
     data.forEach(todo => {
-      if (d[todo.userId] === undefined) {
-        d[todo.userId] = 0;
-      }
       if (todo.completed === true) {
+        if (d[todo.userId] === undefined) {
+          d[todo.userId] = 0;
+        }
         d[todo.userId] += 1;
       }
     });
