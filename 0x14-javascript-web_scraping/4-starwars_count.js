@@ -6,7 +6,7 @@ const character = 'https://swapi-api.alx-tools.com/api/people/18/';
 request(url, (error, response) => {
   if (error) {
     console.log(error);
-  } else {
+  } else if (response.statusCode === 200) {
     let count = 0;
     const films = JSON.parse(response.body).results;
     films.forEach(film => {
@@ -17,5 +17,7 @@ request(url, (error, response) => {
       });
     });
     console.log(count);
+  } else {
+    console.log('Erorr Code:' + response.statusCode);
   }
 });
