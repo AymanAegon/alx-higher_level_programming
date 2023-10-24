@@ -11,7 +11,8 @@ request(url, (error, response) => {
     data.forEach(todo => {
       if (d[todo.userId] === undefined) {
         d[todo.userId] = 0;
-      } else if (todo.completed === true) {
+      }
+      if (todo.completed === true) {
         d[todo.userId] += 1;
       }
     });
