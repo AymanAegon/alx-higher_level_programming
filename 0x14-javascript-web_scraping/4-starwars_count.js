@@ -1,7 +1,6 @@
 #!/usr/bin/node
 const request = require('request');
 const url = process.argv[2];
-const character = 'https://swapi-api.alx-tools.com/api/people/18/';
 
 request(url, (error, response) => {
   if (error) {
@@ -11,7 +10,7 @@ request(url, (error, response) => {
     const films = JSON.parse(response.body).results;
     films.forEach(film => {
       film.characters.forEach(c => {
-        if (character === c) {
+        if (c.includes("18")) {
           count += 1;
         }
       });
